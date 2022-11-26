@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css'
+import './Header.scss'
 import { withRouter, Link } from 'react-router-dom'
 
 const Header: React.FC = () => {
