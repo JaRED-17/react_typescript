@@ -1,8 +1,14 @@
 import React from 'react';
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const App: React.FC = () => {
     return (
-        <h3>App works well</h3>
+        <>
+            <Header />
+            <h3>App works well</h3>
+            <Footer />
+        </>
     );
 };
 
