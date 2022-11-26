@@ -1,10 +1,14 @@
 import React from 'react';
 import './Header.css'
+import { withRouter, Link } from 'react-router-dom'
 
 const Header: React.FC = () => {
     return (
-        <div className='header'></div>
+        <div className='header'>
+            <Link to="/">Home</Link>
+            <Link to="/about-us">About us</Link>
+        </div>
     );
 };
 
-export default Header;
+export default withRouter(Header);

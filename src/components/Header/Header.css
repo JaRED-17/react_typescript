@@ -2,3 +2,6 @@
     height: 50px;
     background: bisque;
 }
+.header a:nth-child(2) {
+    margin-left: 10px;
+}
