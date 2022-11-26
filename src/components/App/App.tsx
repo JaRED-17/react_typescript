@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = () => {
+const App: React.FC = () => {
     return (
         <h3>App works well</h3>
     );

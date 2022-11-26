@@ -1,0 +1,44 @@
+{
+    "env": {
+        "es6": true
+    },
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:unicorn/recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "unicorn",
+        "react",
+        "prettier"
+    ],
+    "rules": {
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "indent": ["error", 4],
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": "error",
+        "no-use-before-define": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "react/function-component-definition": [2, {
+            "namedComponents": "arrow-function"
+        }],
+        "react/jsx-filename-extension": [1, {
+            "extensions": [".js", ".jsx"]
+        }],
+        "semi": "off",
+        "space-in-parens": "error",
+        "unicorn/filename-case": ["error", {
+            "cases": {
+                "camelCase": true,
+                "pascalCase": true
+            }
+        }],
+        "unicorn/prevent-abbreviations": "off"
+    }
+}
