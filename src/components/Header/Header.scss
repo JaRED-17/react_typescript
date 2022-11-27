@@ -2,7 +2,7 @@
     height: 50px;
     background: bisque;
 
-    a:nth-child(2) {
+    a:not(:first-child) {
         margin-left: 10px;
     }
 }
