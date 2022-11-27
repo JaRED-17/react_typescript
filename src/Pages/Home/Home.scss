@@ -1,0 +1,17 @@
+.home-page {
+  &__goods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1452px;
+
+    &-item {
+      margin: 10px;
+      border: 1px solid black;
+
+      &-name {
+        text-align: center;
+      }
+    }
+  }
+}
