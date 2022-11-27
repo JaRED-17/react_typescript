@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom'
-import goods from "../../store/store"
+import goods from "../../store/goods"
 import './Home.scss'
 
 const Home: React.FC = () => {
