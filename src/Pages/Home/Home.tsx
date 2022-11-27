@@ -19,14 +19,14 @@ const Home: React.FC = () => {
         { name: "9", image: "./goods.jpg" },
         { name: "10", image: "./goods.jpg" }
     ];
-    const classPrefix: string = 'home-page'
+    const classPrefix: string = 'home-page';
 
     return (
         <div className={classPrefix}>
             <div className={`${classPrefix}__goods`}>
                 {goods.map(item => {
                     return (
-                        <div className={`${classPrefix}__goods-item`}>
+                        <div key={item.name} className={`${classPrefix}__goods-item`}>
                             <div className={`${classPrefix}__goods-item-image`}>
                                 <img src={item.image} alt="" />
                             </div>
