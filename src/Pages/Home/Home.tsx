@@ -12,9 +12,14 @@ const Home: React.FC = () => {
         { name: "2", image: "./goods.jpg" },
         { name: "3", image: "./goods.jpg" },
         { name: "4", image: "./goods.jpg" },
-        { name: "5", image: "./goods.jpg" }
+        { name: "5", image: "./goods.jpg" },
+        { name: "6", image: "./goods.jpg" },
+        { name: "7", image: "./goods.jpg" },
+        { name: "8", image: "./goods.jpg" },
+        { name: "9", image: "./goods.jpg" },
+        { name: "10", image: "./goods.jpg" }
     ];
-    const classPrefix = 'home-page'
+    const classPrefix: string = 'home-page'
 
     return (
         <div className={classPrefix}>
