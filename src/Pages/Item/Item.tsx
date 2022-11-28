@@ -4,17 +4,7 @@ import goods from "../../store/goods"
 import currency from "../../store/currency"
 
 const Item: React.FC<any> = ({ id }) => {
-    const getItemById = (id: string) => {
-        let item: Goods = { id: 0, image: "", name: "", cost: 0 };
-
-        goods.forEach(i => {
-            if (i.id.toString() == id) {
-                item = i;
-            }
-        });
-
-        return item;
-    }
+    const getItemById = (id: string): Goods => goods.filter(i => i.id.toString() === id)[0]
     const item: Goods = getItemById(id);
 
     return (
