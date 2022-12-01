@@ -14,6 +14,7 @@
         "@types/node": "^16.11.21",
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
+        "express": "^4.18.2",
         "node-sass": "^8.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -21,7 +22,8 @@
         "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",
         "typescript": "^4.5.5",
-        "web-vitals": "^0.2.4"
+        "web-vitals": "^0.2.4",
+        "webpack-dev-middleware": "^6.0.1"
     },
     "devDependencies": {
         "@babel/core": "^7.20.2",
@@ -55,7 +57,8 @@
     },
     "scripts": {
         "start": "webpack-dev-server --mode=development --open --hot",
-        "build": "webpack --mode=production"
+        "build": "webpack --mode=production",
+        "node": "node server.js"
     },
     "eslintConfig": {
         "extends": [
