@@ -8,6 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
@@ -15,6 +16,9 @@ module.exports = {
         alias: {
             react: path.join(__dirname, 'node_modules', 'react'),
         },
+    },
+    devServer: {
+        historyApiFallback: true
     },
     module: {
         rules: [
