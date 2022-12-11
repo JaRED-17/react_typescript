@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom'
-import goods from "../../store/goods"
+import core from "../../core/core"
+import { observer } from "mobx-react"
 import './Home.scss'
 
-const Home: React.FC = () => {
+const Home: React.FC = observer(() => {
     const classPrefix = 'home-page';
+
+    useEffect(() => {
+        core.goods.API();
+    }, []);
+
+    const response = () => {
+        return core.goods.status.response() || [];
+    }
+
+    const loading = () => {
+        return core.goods.status.loading();
+    }
 
     return (
         <div className={classPrefix}>
             <div className={`${classPrefix}__goods`}>
-                {goods.map(item => (
+                {loading() ? "loading" : response().map((item: any) => (
                     <Link key={item.id} to={`/store/item/${item.id}`}>
                         <div className={`${classPrefix}__goods-item`}>
                             <div className={`${classPrefix}__goods-item-image`}>
@@ -22,6 +35,6 @@ const Home: React.FC = () => {
             </div>
         </div>
     );
-};
+});
 
 export default withRouter(Home);
