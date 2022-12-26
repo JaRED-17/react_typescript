@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -55,6 +56,14 @@ module.exports = {
                     'sass-loader'
                 ]
             },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader'
+                    }
+                ]
+            }
         ],
     },
     plugins: [
@@ -63,6 +72,14 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name]-[hash].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, './src/media'),
+                    to: path.resolve(__dirname, './build/media')
+                }
+            ]
         })
     ],
 };
